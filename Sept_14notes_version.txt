@@ -1,0 +1,45 @@
+Version Control: Sept. 14
+
+
+
+
+
+SVN:subversion
+Git/Github: probably use this for version control
+
+Code Control Methods:
+LOCO: Lock On Check Out
+MOM: Merge on modify
+-get latest version, no lock, editable, then on commit it tries to 
+automatically merge. If Auto-merge fails then there may be some
+manual user input
+
+.git ignore - things that git will ignore when correctly set
+
+Conflicts:
+when same code is edited and will not be automatically ignored
+-hopefully there will be a warning indicating this
+
+Commit early and often
+Don't commit output files ie. file.o files
+Don't merge broken code
+
+
+
+On start:
+clone Remote Repo to the Local Repo
+at this point if you commit you are commiting to Local Repo
+You need to push to get it to Remote Repository.
+
+Create a git repo:
+mkdir repo
+cd repo
+git init ;  tells the thing to make the actual repository
+
+git add ---tell git to stage changes
+git commit --commit the stage changes
+
+git pull = git fetch + git merge to get everything to your 
+local repository
+
+Branching: each team member works on their own branch

@@ -1,0 +1,30 @@
+all:
+	g++ main.cpp hello.cpp factorial.cpp -o hello
+
+#Or you can use dependencies see below:
+all: hello
+#hello is the executable you want in the end, so the targe
+#all depends on hello
+
+hello: main.o factorial.o hello.o
+#now we are saying our main executable depends on three
+#other executables they are created thorugh:
+	g++ main.o factorial.o hello.o -o hello
+#this will use all the executabes created to create the
+#final executable
+
+#OTHER DEPENDENCIES:
+main.o: main.cpp
+	g++ -c main.cpp
+#main.o depends on the compilation of main.cpp
+
+factorial.o: factorial.cpp
+	g++ -c factorial.cpp
+
+hello.o: hello.cpp
+	g++ -c hello.cpp
+
+clean:
+	rm *o hello
+#this target is used to rid the other object files
+#and executables

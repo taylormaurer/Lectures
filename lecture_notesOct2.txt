@@ -1,0 +1,63 @@
+XML continued October Second...
+
+SOAP: Simple Object Access Protocol
+Idea: client creates SOAP messages, goes to handlers that deal
+with request in multiple stages-ALL on the client side. Then
+the message is transferred through to the service provider to
+another handler which can then unpackage the data
+
+RPC-Remote Procedure Calls. How apps communicate between each
+other. 
+
+HTTP: is a protocol, set of rules used to transfer information
+
+SOAP allos for applications to communicate between each
+other even on different OS, with different technologies, different languages.
+
+SOAP - uses XML.
+W3C recommendation (world wide web consortium)
+
+Setup:
+first set up SOAP message which is an XML document
+	contains host, contnet type, action etc.
+protocal is in header (http, https, cont.)
+the soap envelop which contains SOAP Headers and SOAP body.
+SOAP body has fault information and message name
+
+xmlns:soap namespace is alwasy constant
+
+SOAP Handlers:
+Extra handlers before message sent, before reccieved, almost anywwhere
+With the handlers do checks, do logging. 
+
+*Soap tutorials are available!
+
+REST and REST API.
+Representation State Transfer
+
+Idea: we could load the .html and myclient.js, then we would
+do an API request with http get accssing the API on the server.
+
+Create, read, update, or delete information on a server using
+simple HTTP calls.
+Alternative for SOAP (less work)
+
+REST:
+Client-server. ie displaying website vs. data on server
+Stateless - Have to inform the server everytime on who you are 
+If you do have state it would keep track of what you are doing
+ie. keep your shopping cart, or remeber the place syou visit
+
+Cacheable - A cache is available in memory. So that a webpages are
+remebered so that users going to the same page will see a cached 
+version of that to save bandwidth (done by ISP) 
+Layered - 
+Uses JSON data format, and http
+
+Client goes thru centralized API so client has one interface
+to go grab everything. Instead of the client accessing individual
+APIs.
+
+REST APIs that don't require authentication...
+
+API
